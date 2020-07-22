@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Callback Hell</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script async defer>
+        let func2 = (cb) => {
+
+            cb();
+        }
+        let func3 = (cb) => {
+
+            cb();
+        }
+        let func4 = (cb) => {
+
+            cb();
+        }
+        let func5 = (cb) => {
+
+            cb();
+        }
+        let func6 = (cb) => {
+
+            cb();
+        }
+        let func7 = (cb) => {
+
+            cb();
+        }
+        let func8 = (cb) => {
+
+            cb();
+        }
+        let func9 = (cb) => {
+
+            cb();
+        }
+
+        let func10 = (cb) => {
+
+            cb();
+        }
+
+
+        let funcfinal = (cb) => {
+            cb();
+        };
+
+        (function () {
+            let str = `${a}..`;
+
+            func2(function () {
+                a -= 1;
+                str += `${a}..`;
+                func3(function () {
+                    a -= 1;
+                    str += `${a}..`;
+                    func4(function () {
+                        a -= 1;
+                        str += `${a}..`;
+                        func5(function () {
+                            a -= 1;
+                            str += `${a}..`;
+                            func6(function () {
+                                a -= 1;
+                                str += `${a}..`;
+                                func7(function () {
+                                    a -= 1;
+                                    str += `${a}..`;
+                                    func8(function () {
+                                        a -= 1;
+                                        str += `${a}..`;
+                                        func9(function () {
+                                            a -= 1;
+                                            str += `${a}..`;
+                                            func9(function () {
+                                                a -= 1;
+                                                str += `${a}..`;
+                                                funcfinal(function () {
+                                                    str += ` HAPPY MORNING`;
+                                                    console.log(str);
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        })(a = 10);
+    </script>
+</body>
+
+</html>
